@@ -6,7 +6,7 @@
  * @link      https://github.com/hiqdev/php-merchant-okpay
  * @package   php-merchant-okpay
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
 namespace hiqdev\php\merchant\okpay;
@@ -38,23 +38,24 @@ class Merchant extends \hiqdev\php\merchant\Merchant
 
     public function validateConfirmation($data)
     {
-        if ($this->purse!=$data['ok_receiver']) {
+        if ($this->purse !== $data['ok_receiver']) {
             return 'Wrong receiver';
         }
-        if ($data['ok_txn_status']!='completed') {
+        if ($data['ok_txn_status'] !== 'completed') {
             return "Not completed: $data[ok_txn_status]";
         }
         $data['ok_verify'] = 'true';
-        $result = static::curl($this->checkUrl, $data);
-        if ($result!='VERIFIED') {
+        $result            = static::curl($this->checkUrl, $data);
+        if ($result !== 'VERIFIED') {
             return error("Not VERIFIED: $result");
         }
-        $this->mset(array(
-            'from'  => trim($data['ok_payer_first_name'].' '.$data['ok_payer_last_name']).'/'.$data['ok_payer_email'],
-            'txn'   => $data['ok_txn_id'],
-            'sum'   => $data['ok_txn_gross'],
-            'time'  => $this->formatDatetime($data['ok_txn_datetime']),
-        ));
-        return null;
+        $this->mset([
+            'from' => trim($data['ok_payer_first_name'] . ' ' . $data['ok_payer_last_name']) . '/' . $data['ok_payer_email'],
+            'txn'  => $data['ok_txn_id'],
+            'sum'  => $data['ok_txn_gross'],
+            'time' => $this->formatDatetime($data['ok_txn_datetime']),
+        ]);
+
+        return;
     }
 }
