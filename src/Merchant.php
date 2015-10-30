@@ -14,7 +14,7 @@ namespace hiqdev\php\merchant\okpay;
 class Merchant extends \hiqdev\php\merchant\Merchant
 {
     protected static $_defaults = [
-        'name'        => 'okpay',
+        'system'      => 'okpay',
         'label'       => 'OKPAY',
         'actionUrl'   => 'https://www.okpay.com/process.html',
         'checkUrl'    => 'https://www.okpay.com/ipn-verify.html',
