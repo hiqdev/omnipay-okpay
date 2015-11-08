@@ -1,5 +1,5 @@
-hiqdev/php-merchant-okpay commits history
------------------------------------------
+hiqdev/omnipay-okpay commits history
+------------------------------------
 
 ## Under development
 

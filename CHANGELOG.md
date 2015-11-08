@@ -1,5 +1,5 @@
-hiqdev/php-merchant-okpay changelog
------------------------------------
+hiqdev/omnipay-okpay changelog
+------------------------------
 
 ## Under development
 
