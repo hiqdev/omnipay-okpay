@@ -1,11 +1,11 @@
 <?php
 
 /*
- * OKPAY plugin for PHP merchant library
+ * OKPAY driver for Omnipay PHP payment library
  *
- * @link      https://github.com/hiqdev/php-merchant-okpay
- * @package   php-merchant-okpay
- * @license   BSD-3-Clause
+ * @link      https://github.com/hiqdev/omnipay-okpay
+ * @package   omnipay-okpay
+ * @license   MIT
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
