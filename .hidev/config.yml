@@ -1,6 +1,7 @@
 package:
     name:           omnipay-okpay
     namespace:      hiqdev\php\merchant\okpay
+    headline:       Omnipay: OKPAY
     title:          OKPAY driver for Omnipay PHP payment library
     type:           library
     license:        MIT

@@ -1,5 +1,7 @@
-OKPAY driver for Omnipay PHP payment library
-============================================
+Omnipay: OKPAY
+==============
+
+**OKPAY driver for Omnipay PHP payment library**
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-okpay/v/stable)](//packagist.org/packages/hiqdev/omnipay-okpay)
 [![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-okpay/downloads)](//packagist.org/packages/hiqdev/omnipay-okpay)
