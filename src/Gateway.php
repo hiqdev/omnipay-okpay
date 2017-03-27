@@ -24,6 +24,16 @@ class Gateway extends AbstractGateway
         return $this->setParameter('account', $value);
     }
 
+    public function getPurse()
+    {
+        return $this->getAccount();
+    }
+
+    public function setPurse($value)
+    {
+        return $this->setAccount($value);
+    }
+
     public function getAccountName()
     {
         return $this->getParameter('account_name');
@@ -47,7 +57,6 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'account' => '',
             'account_name' => '',
             'secret' => '',
         );
