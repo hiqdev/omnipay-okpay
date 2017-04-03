@@ -13,6 +13,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     public function __construct(RequestInterface $request, $data, $redirectUrl)
     {
         parent::__construct($request, $data);
+
         $this->redirectUrl = $redirectUrl;
     }
 
