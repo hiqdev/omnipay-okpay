@@ -1,8 +1,9 @@
 hiqdev/omnipay-okpay commits history
 ------------------------------------
 
-## [Under development]
+## [0.1.0] - 2017-05-05
 
+- Added tests ([@SilverFire], [@BladeRoot], [@hiqsol])
 - Redone to `omnipay-okpay` ([@hiqsol])
 - Added basics ([@hiqsol])
 
@@ -17,3 +18,4 @@ hiqdev/omnipay-okpay commits history
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
 [Under development]: https://github.com/hiqdev/omnipay-okpay/releases
+[0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0

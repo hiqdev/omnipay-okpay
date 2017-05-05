@@ -1,9 +1,10 @@
 hiqdev/omnipay-okpay commits history
 ------------------------------------
 
-## [Under development]
+## [0.1.0] - 2017-05-05
 
 - Added tests
+    - [a041e6b] 2017-05-05 hideved, csfixed [@SilverFire]
     - [a60b417] 2017-05-05 Merge branch 'bladeroot-omnipay-okpay-tests' [@SilverFire]
     - [9cfd609] 2017-04-03 tests [@BladeRoot]
     - [3a07721] 2017-04-03 init test [@BladeRoot]
@@ -47,3 +48,5 @@ hiqdev/omnipay-okpay commits history
 [f970bb3]: https://github.com/hiqdev/omnipay-okpay/commit/f970bb3
 [0259525]: https://github.com/hiqdev/omnipay-okpay/commit/0259525
 [Under development]: https://github.com/hiqdev/omnipay-okpay/releases
+[a041e6b]: https://github.com/hiqdev/omnipay-okpay/commit/a041e6b
+[0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0
