@@ -8,16 +8,6 @@ class RefundRequest extends AbstractRequest
 {
     protected $endpoint = 'https://api.okpay.com/OkPayAPI?wsdl';
 
-    public function getAccount()
-    {
-        return $this->getParameter('account');
-    }
-
-    public function setAccount($value)
-    {
-        return $this->setParameter('account', $value);
-    }
-
     public function getSecret()
     {
         return $this->getParameter('secret');
@@ -40,10 +30,10 @@ class RefundRequest extends AbstractRequest
 
     public function getData()
     {
-        $this->validate('account', 'payeeAccount', 'amount', 'secret', 'description');
+        $this->validate('purse', 'payeeAccount', 'amount', 'secret', 'description');
 
         $data['secret'] = $this->getSecret();
-        $data['walletId'] = $this->getAccount();
+        $data['walletId'] = $this->getPurse();
         $data['receiver'] = $this->getPayeeAccount();
         $data['amount'] = $this->getAmount();
         $data['currency'] = $this->getCurrency();
@@ -61,11 +51,9 @@ class RefundRequest extends AbstractRequest
 
     private function soapCall($data)
     {
-        $secWord = $data['secret'];
-        $WalletID = $data['walletId'];
         $datePart = gmdate("Ymd");
         $timePart = gmdate("H");
-        $authString = $secWord.":".$datePart.":".$timePart;
+        $authString = "{$data['secret']}:{$datePart}:{$timePart}";
 
         $sha256 = bin2hex(hash('sha256', $authString, true));
         $secToken = strtoupper($sha256);
@@ -85,7 +73,7 @@ class RefundRequest extends AbstractRequest
                 ]
             );
 
-            $this->WalletID = $WalletID;
+            $this->WalletID = $data['walletId'];
             $this->SecurityToken = $secToken;
             $this->Currency = $data['currency'];
             $this->Receiver = $data['receiver'];

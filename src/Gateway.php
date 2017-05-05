@@ -14,34 +14,14 @@ class Gateway extends AbstractGateway
         return 'OKPAY';
     }
 
-    public function getAccount()
-    {
-        return $this->getParameter('account');
-    }
-
-    public function setAccount($value)
-    {
-        return $this->setParameter('account', $value);
-    }
-
     public function getPurse()
     {
-        return $this->getAccount();
+        return $this->getParameter('purse');
     }
 
     public function setPurse($value)
     {
-        return $this->setAccount($value);
-    }
-
-    public function getAccountName()
-    {
-        return $this->getParameter('account_name');
-    }
-
-    public function setAccountName($value)
-    {
-        return $this->setParameter('account_name', $value);
+        return $this->setParameter('purse', $value);
     }
 
     public function getSecret()
@@ -57,7 +37,7 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'account_name' => '',
+            'purse' => '',
             'secret' => '',
         );
     }
