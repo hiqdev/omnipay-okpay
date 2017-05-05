@@ -1,10 +1,17 @@
 <?php
+/**
+ * OKPAY driver for Omnipay PHP payment library.
+ *
+ * @link      https://github.com/hiqdev/omnipay-okpay
+ * @package   omnipay-okpay
+ * @license   MIT
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
+ */
 
 namespace Omnipay\OKPAY\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
-use Omnipay\OKPAY\Support\Helpers;
 
 class RefundResponse extends AbstractResponse
 {
@@ -32,7 +39,7 @@ class RefundResponse extends AbstractResponse
 
     private function parseResponse($data)
     {
-        if ($data->Status != 'Completed') {
+        if ($data->Status !== 'Completed') {
             $this->message = $data->Status;
             $this->success = false;
 
@@ -40,5 +47,4 @@ class RefundResponse extends AbstractResponse
         }
         $this->success = true;
     }
-
 }

@@ -1,4 +1,12 @@
 <?php
+/**
+ * OKPAY driver for Omnipay PHP payment library.
+ *
+ * @link      https://github.com/hiqdev/omnipay-okpay
+ * @package   omnipay-okpay
+ * @license   MIT
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
+ */
 
 namespace Omnipay\OKPAY\Message;
 
@@ -51,8 +59,8 @@ class RefundRequest extends AbstractRequest
 
     private function soapCall($data)
     {
-        $datePart = gmdate("Ymd");
-        $timePart = gmdate("H");
+        $datePart = gmdate('Ymd');
+        $timePart = gmdate('H');
         $authString = "{$data['secret']}:{$datePart}:{$timePart}";
 
         $sha256 = bin2hex(hash('sha256', $authString, true));
@@ -61,8 +69,8 @@ class RefundRequest extends AbstractRequest
         try {
             $client = new \SoapClient(
                 $this->endpoint, [
-                    "soap_version" => SOAP_1_1,
-                    "stream_context" => stream_context_create(
+                    'soap_version' => SOAP_1_1,
+                    'stream_context' => stream_context_create(
                         [
                             'ssl' => [
                                 'verify_peer' => false,
@@ -85,7 +93,6 @@ class RefundRequest extends AbstractRequest
             $wsResult = $webService->Send_MoneyResult;
 
             return $wsResult;
-
         } catch (\Exception $e) {
             throw new InvalidRequestException($e->getMessage());
         }

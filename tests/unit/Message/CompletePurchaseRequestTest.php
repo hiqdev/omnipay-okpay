@@ -1,12 +1,11 @@
 <?php
-
-/*
- * OKPAY driver for Omnipay PHP payment library
+/**
+ * OKPAY driver for Omnipay PHP payment library.
  *
  * @link      https://github.com/hiqdev/omnipay-okpay
  * @package   omnipay-okpay
  * @license   MIT
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace Omnipay\OKPAY\Message;
@@ -46,7 +45,7 @@ class CompletePurchaseRequestTest extends TestCase
         'ok_invoice' => '',
         'ok_payer_status' => 'verified',
         'ok_payer_id' => '914126735',
-        'ok_payer_reputation' => '0', 
+        'ok_payer_reputation' => '0',
         'ok_payer_first_name' => 'Valentin',
         'ok_payer_last_name' => 'Perevalov',
         'ok_payer_email' => 'valenp@mail.ru',
@@ -59,15 +58,14 @@ class CompletePurchaseRequestTest extends TestCase
         'ok_payer_street' => 'Truda 24-136',
         'ok_payer_zip' => '454006',
         'ok_payer_address_name' => 'Postal',
-        'ok_items_count' => '1', 
+        'ok_items_count' => '1',
         'ok_item_1_name' => 'evo.ru-tld.ru: deposit valenp',
         'ok_item_1_type' => 'digital',
-        'ok_item_1_quantity' => '1', 
+        'ok_item_1_quantity' => '1',
         'ok_item_1_gross' => '68.71',
         'ok_item_1_price' => '68.71',
         'ok_ipn_id' => '2011795',
     ];
-
 
     public function setUp()
     {
@@ -96,7 +94,7 @@ class CompletePurchaseRequestTest extends TestCase
 
     public function testSendData()
     {
-//        $data = $this->request->getData();
+        //        $data = $this->request->getData();
         $response = $this->request->sendData($this->data);
         $this->assertInstanceOf('Omnipay\OKPAY\Message\CompletePurchaseResponse', $response);
     }
