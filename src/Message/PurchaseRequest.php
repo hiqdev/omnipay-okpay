@@ -24,6 +24,7 @@ class PurchaseRequest extends AbstractRequest
             'ok_ipn' => $this->getNotifyUrl(),
             'ok_return_success' => $this->getReturnUrl(),
             'ok_return_fail' => $this->getCancelUrl(),
+            'ok_fees' => 1,
         ];
     }
 
