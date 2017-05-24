@@ -42,11 +42,22 @@ class Gateway extends AbstractGateway
         return $this->setParameter('secret', $value);
     }
 
+    public function setFees($value)
+    {
+        return $this->setParameter('fees', $value);
+    }
+
+    public function getFees()
+    {
+        return $this->getParameter('fees');
+    }
+
     public function getDefaultParameters()
     {
         return [
             'purse' => '',
             'secret' => '',
+            'fees' => 1,
         ];
     }
 
