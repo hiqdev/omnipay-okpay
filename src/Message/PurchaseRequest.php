@@ -15,12 +15,17 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('purse', 'currency', 'amount', 'description');
-        $data['ok_receiver'] = $this->getPurse();
-        $data['ok_item_1_name'] = $this->getDescription();
-        $data['ok_currency'] = $this->getCurrency();
-        $data['ok_item_1_price'] = $this->getAmount();
-        $data['ok_invoice'] = $this->getTransactionId();
-        return $data;
+        return [
+            'ok_receiver' => $this->getPurse(),
+            'ok_item_1_name' => $this->getDescription(),
+            'ok_currency' => $this->getCurrency(),
+            'ok_item_1_price' => $this->getAmount(),
+            'ok_invoice' => $this->getTransactionId(),
+            'ok_ipn' => $this->getNotifyUrl(),
+            'ok_return_success' => $this->getReturnUrl(),
+            'ok_return_fail' => $this->getCancelUrl(),
+            'ok_fees' => $this->getFees(),
+        ];
     }
 
     public function sendData($data)

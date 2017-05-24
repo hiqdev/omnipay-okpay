@@ -51,4 +51,14 @@ abstract class AbstractRequest extends OmnipayRequest
     {
         return $this->getParameter('description');
     }
+
+    public function setFees($value)
+    {
+        return $this->setParameter('fees', $value);
+    }
+
+    public function getFees()
+    {
+        return  $this->getParameter('fees');
+    }
 }
