@@ -14,7 +14,6 @@ class PurchaseRequest extends AbstractRequest
 {
     public function getData()
     {
-        // \yii\helpers\VarDumper::dump($this);die();
         $this->validate('purse', 'currency', 'amount', 'description');
         return [
             'ok_receiver' => $this->getPurse(),
