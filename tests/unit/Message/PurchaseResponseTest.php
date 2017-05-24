@@ -55,6 +55,6 @@ class PurchaseResponseTest extends TestCase
             'ok_currency'       => $this->currency,
             'ok_item_1_price'   => $this->amount,
             'ok_invoice'        => $this->transactionId,
-        ], $response->getRedirectData());
+        ], array_filter($response->getRedirectData()));
     }
 }
