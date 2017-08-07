@@ -41,7 +41,7 @@ class CompletePurchaseResponseTest extends TestCase
         $response = new CompletePurchaseResponse($this->request, [
             'ok_item_1_name'            => $this->description,
             'ok_receiver'               => $this->purse,
-            'ok_txn_amount'             => $this->amount,
+            'ok_txn_gross'              => $this->amount,
             'ok_txn_datetime'           => $this->timestamp,
             'ok_txn_id'                 => $this->transactionId,
             'ok_txn_status'             => $this->status,
