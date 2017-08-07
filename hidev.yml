@@ -11,6 +11,3 @@ package:
         processing library for PHP 5.3+.
         This package implements [OKPAY](https://okpay.com/) support for Omnipay.
 
-require:
-    hiqdev/hidev-vendor: "*"
-    hiqdev/hidev-php:    "*"

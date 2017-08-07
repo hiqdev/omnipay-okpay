@@ -1,6 +1,22 @@
 hiqdev/omnipay-okpay commits history
 ------------------------------------
 
+## [0.2.0] - 2017-08-07
+
+- Use `ok_txn_amount` instead of `ok_txn_gross` to follow OkPay API changes
+    - [8eef1f9] 2017-08-07 Merge pull request #4 from bladeroot/omnipay-rename-amount [@SilverFire]
+    - [e88fcfc] 2017-08-07 change: rename ok_txn_amount to ok_txn_gross [@BladeRoot]
+- Added IPN and fees support
+    - [272b16c] 2017-05-23 + ipn [@BladeRoot]
+    - [2c1c65a] 2017-05-24 fix: revove commented code [@BladeRoot]
+    - [efcbe27] 2017-05-24 Merge pull request #3 from bladeroot/okpay-add-ipn [@hiqsol]
+    - [0631ec6] 2017-05-24 Merge pull request #2 from bladeroot/okpay-add-ipn [@hiqsol]
+    - [605e5e8] 2017-05-24 + fees fixes [@BladeRoot]
+    - [9f362f3] 2017-05-24 + fees [@BladeRoot]
+    - [2443b23] 2017-05-24 fix: client should be pay commission [@BladeRoot]
+- Enhanced tests, other minor enhancements
+    - [7b060c6] 2017-05-24 quickfixed PurchaseResponseTest [@hiqsol]
+
 ## [0.1.0] - 2017-05-05
 
 - Added tests
@@ -47,6 +63,17 @@ hiqdev/omnipay-okpay commits history
 [359b4bf]: https://github.com/hiqdev/omnipay-okpay/commit/359b4bf
 [f970bb3]: https://github.com/hiqdev/omnipay-okpay/commit/f970bb3
 [0259525]: https://github.com/hiqdev/omnipay-okpay/commit/0259525
-[Under development]: https://github.com/hiqdev/omnipay-okpay/releases
+[Under development]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...HEAD
 [a041e6b]: https://github.com/hiqdev/omnipay-okpay/commit/a041e6b
 [0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0
+[8eef1f9]: https://github.com/hiqdev/omnipay-okpay/commit/8eef1f9
+[e88fcfc]: https://github.com/hiqdev/omnipay-okpay/commit/e88fcfc
+[7b060c6]: https://github.com/hiqdev/omnipay-okpay/commit/7b060c6
+[efcbe27]: https://github.com/hiqdev/omnipay-okpay/commit/efcbe27
+[0631ec6]: https://github.com/hiqdev/omnipay-okpay/commit/0631ec6
+[605e5e8]: https://github.com/hiqdev/omnipay-okpay/commit/605e5e8
+[9f362f3]: https://github.com/hiqdev/omnipay-okpay/commit/9f362f3
+[2443b23]: https://github.com/hiqdev/omnipay-okpay/commit/2443b23
+[2c1c65a]: https://github.com/hiqdev/omnipay-okpay/commit/2c1c65a
+[272b16c]: https://github.com/hiqdev/omnipay-okpay/commit/272b16c
+[0.2.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...0.2.0
