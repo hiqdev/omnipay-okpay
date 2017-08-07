@@ -36,7 +36,6 @@ class CompletePurchaseRequestTest extends TestCase
         'ok_txn_payment_type' => 'instant',
         'ok_txn_payment_method' => 'OKB',
         'ok_txn_gross' => '68.71',
-        'ok_txn_amount' => 68.71,
         'ok_txn_net' => '68.71',
         'ok_txn_fee' => '0.00',
         'ok_txn_currency' => 'USD',
@@ -87,7 +86,7 @@ class CompletePurchaseRequestTest extends TestCase
 
         $this->assertSame($this->description,   $data['ok_item_1_name']);
         $this->assertSame($this->transactionId, $data['ok_txn_id']);
-        $this->assertSame($this->amount,        $data['ok_txn_amount']);
+        $this->assertSame($this->amount,        $data['ok_txn_gross']);
         $this->assertSame($this->timestamp,     $data['ok_txn_datetime']);
         $this->assertSame($this->purse,         $data['ok_receiver']);
     }
