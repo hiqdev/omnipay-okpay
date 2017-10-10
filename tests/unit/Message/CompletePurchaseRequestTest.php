@@ -72,7 +72,7 @@ class CompletePurchaseRequestTest extends TestCase
 
         $httpRequest = new HttpRequest([], $this->data);
 
-        $this->request = new CompletePurchaseRequest($this->getHttpClient(), $httpRequest);
+        $this->request = new NoVerificationCompletePurchaseRequest($this->getHttpClient(), $httpRequest);
         $this->request->initialize([
             'purse'     => $this->purse,
             'secret'    => $this->secret,
@@ -86,7 +86,7 @@ class CompletePurchaseRequestTest extends TestCase
 
         $this->assertSame($this->description,   $data['ok_item_1_name']);
         $this->assertSame($this->transactionId, $data['ok_txn_id']);
-        $this->assertSame($this->amount,        $data['ok_txn_gross']);
+        $this->assertEquals($this->amount,      $data['ok_txn_gross']);
         $this->assertSame($this->timestamp,     $data['ok_txn_datetime']);
         $this->assertSame($this->purse,         $data['ok_receiver']);
     }
@@ -96,5 +96,13 @@ class CompletePurchaseRequestTest extends TestCase
         //        $data = $this->request->getData();
         $response = $this->request->sendData($this->data);
         $this->assertInstanceOf('Omnipay\OKPAY\Message\CompletePurchaseResponse', $response);
+    }
+}
+
+class NoVerificationCompletePurchaseRequest extends CompletePurchaseRequest
+{
+    public function getData()
+    {
+        return $this->httpRequest->request->all();
     }
 }
