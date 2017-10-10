@@ -23,6 +23,11 @@ class CompletePurchaseResponseTest extends TestCase
     private $currency               = 'USD';
     private $testMode               = true;
     private $status                 = 'completed';
+    private $fee                    = '0.00';
+    private $payer_first_name       = 'FirstName';
+    private $payer_last_name        = 'LastName';
+    private $payer_email            = 'email@example.com';
+    private $datetime               = '2017-09-20 16:07:50';
 
     public function setUp()
     {
@@ -42,10 +47,14 @@ class CompletePurchaseResponseTest extends TestCase
             'ok_item_1_name'            => $this->description,
             'ok_receiver'               => $this->purse,
             'ok_txn_gross'              => $this->amount,
-            'ok_txn_datetime'           => $this->timestamp,
+            'ok_txn_datetime'           => $this->datetime,
             'ok_txn_id'                 => $this->transactionId,
             'ok_txn_status'             => $this->status,
             'ok_txn_currency'           => $this->currency,
+            'ok_txn_fee'                => $this->fee,
+            'ok_payer_first_name'       => $this->payer_first_name,
+            'ok_payer_last_name'        => $this->payer_last_name,
+            'ok_payer_email'            => $this->payer_email,
         ]);
 
         $this->assertTrue($response->isSuccessful());
@@ -56,5 +65,8 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($this->purse,                 $response->getPurse());
         $this->assertSame($this->currency,              $response->getCurrency());
         $this->assertSame($this->transactionId,         $response->getTransactionId());
+        $this->assertSame($this->fee,                   $response->getFee());
+        $this->assertEquals(new \DateTime($this->datetime), $response->getTime());
+        $this->assertSame($this->payer_first_name . ' ' . $this->payer_last_name . ' / ' . $this->payer_email, $response->getPayer());
     }
 }

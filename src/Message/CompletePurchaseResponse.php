@@ -69,4 +69,19 @@ class CompletePurchaseResponse extends AbstractResponse implements RedirectRespo
     {
         return $this->data['ok_receiver'];
     }
+
+    public function getFee()
+    {
+        return $this->data['ok_txn_fee'];
+    }
+
+    public function getPayer()
+    {
+        return $this->data['ok_payer_first_name'] . ' ' . $this->data['ok_payer_last_name'] . ' / ' . $this->data['ok_payer_email'];
+    }
+
+    public function getTime()
+    {
+        return new \DateTime($this->data['ok_txn_datetime']);
+    }
 }
