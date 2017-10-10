@@ -45,11 +45,6 @@ class CompletePurchaseResponse extends AbstractResponse implements RedirectRespo
         return null;
     }
 
-    public function getTransactionId()
-    {
-        return $this->data['ok_txn_id'];
-    }
-
     public function getAmount()
     {
         return $this->data['ok_txn_gross'];
@@ -83,5 +78,15 @@ class CompletePurchaseResponse extends AbstractResponse implements RedirectRespo
     public function getTime()
     {
         return new \DateTime($this->data['ok_txn_datetime']);
+    }
+
+    public function getTransactionReference()
+    {
+        return $this->data['ok_txn_id'];
+    }
+
+    public function getTransactionId()
+    {
+        return $this->data['ok_invoice'];
     }
 }

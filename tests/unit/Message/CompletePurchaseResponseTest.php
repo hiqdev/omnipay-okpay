@@ -18,7 +18,8 @@ class CompletePurchaseResponseTest extends TestCase
 
     private $purse                  = 'purse@company.co';
     private $description            = 'sDf#$Sdf#$%';
-    private $transactionId          = '1234567890';
+    private $transactionReference   = '1234567890';
+    private $transactionId          = '843145';
     private $amount                 = '8.69';
     private $currency               = 'USD';
     private $testMode               = true;
@@ -48,7 +49,8 @@ class CompletePurchaseResponseTest extends TestCase
             'ok_receiver'               => $this->purse,
             'ok_txn_gross'              => $this->amount,
             'ok_txn_datetime'           => $this->datetime,
-            'ok_txn_id'                 => $this->transactionId,
+            'ok_invoice'                => $this->transactionId,
+            'ok_txn_id'                 => $this->transactionReference,
             'ok_txn_status'             => $this->status,
             'ok_txn_currency'           => $this->currency,
             'ok_txn_fee'                => $this->fee,
@@ -65,6 +67,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($this->purse,                 $response->getPurse());
         $this->assertSame($this->currency,              $response->getCurrency());
         $this->assertSame($this->transactionId,         $response->getTransactionId());
+        $this->assertSame($this->transactionReference,  $response->getTransactionReference());
         $this->assertSame($this->fee,                   $response->getFee());
         $this->assertEquals(new \DateTime($this->datetime), $response->getTime());
         $this->assertSame($this->payer_first_name . ' ' . $this->payer_last_name . ' / ' . $this->payer_email, $response->getPayer());
