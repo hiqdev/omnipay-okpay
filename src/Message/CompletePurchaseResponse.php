@@ -47,7 +47,7 @@ class CompletePurchaseResponse extends AbstractResponse implements RedirectRespo
 
     public function getTransactionId()
     {
-        return intval($this->data['ok_txn_id']);
+        return $this->data['ok_txn_id'];
     }
 
     public function getAmount()

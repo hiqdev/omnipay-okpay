@@ -18,7 +18,7 @@ class CompletePurchaseResponseTest extends TestCase
 
     private $purse                  = 'purse@company.co';
     private $description            = 'sDf#$Sdf#$%';
-    private $transactionId          = 1234567890;
+    private $transactionId          = '1234567890';
     private $amount                 = '8.69';
     private $currency               = 'USD';
     private $testMode               = true;
