@@ -1,8 +1,17 @@
+dev release
 hiqdev/omnipay-okpay commits history
+
+## [Under development]
+
+    - []
+    - []
 ------------------------------------
 
-## [3.0.0] - 2017-10-10
+## [3.0.0] - 2019-10-17
 
+- Update to Omnipay v3
+    - [5076456] 2019-10-17 Update to Omnipay v3 [@SilverFire]
+- Some fixes and enhancements
     - [35ee3d3] 2017-10-10 Fixed CompletePurchaseResponse::getTransactionId() to represent ID, provided by merchant [@SilverFire]
     - [c9006d4] 2017-10-10 Removed typecasting from getTransactionId() [@SilverFire]
     - [d54fb1a] 2017-10-10 Added CompletePurchaseResponse:: getFee(), getPayer(), getTime() [@SilverFire]
@@ -68,7 +77,7 @@ hiqdev/omnipay-okpay commits history
 [359b4bf]: https://github.com/hiqdev/omnipay-okpay/commit/359b4bf
 [f970bb3]: https://github.com/hiqdev/omnipay-okpay/commit/f970bb3
 [0259525]: https://github.com/hiqdev/omnipay-okpay/commit/0259525
-[Under development]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-okpay/compare/3.0.0...HEAD
 [a041e6b]: https://github.com/hiqdev/omnipay-okpay/commit/a041e6b
 [0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0
 [8eef1f9]: https://github.com/hiqdev/omnipay-okpay/commit/8eef1f9
@@ -87,3 +96,4 @@ hiqdev/omnipay-okpay commits history
 [d54fb1a]: https://github.com/hiqdev/omnipay-okpay/commit/d54fb1a
 [91f9111]: https://github.com/hiqdev/omnipay-okpay/commit/91f9111
 [3.0.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.2.0...3.0.0
+[5076456]: https://github.com/hiqdev/omnipay-okpay/commit/5076456

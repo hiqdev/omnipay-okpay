@@ -1,7 +1,12 @@
+dev release
 hiqdev/omnipay-okpay commits history
-------------------------------------
 
-## [3.0.0] - 2017-10-10
+## [Under development]
+
+## [3.0.0] - 2019-10-17
+
+- Update to Omnipay v3 ([@SilverFire])
+- Some fixes and enhancements ([@SilverFire])
 
 ## [0.2.0] - 2017-08-07
 
@@ -25,7 +30,7 @@ hiqdev/omnipay-okpay commits history
 [andreyklochok@gmail.com]: https://github.com/tafid
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
-[Under development]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-okpay/compare/3.0.0...HEAD
 [0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0
 [0.2.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...0.2.0
 [3.0.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.2.0...3.0.0
