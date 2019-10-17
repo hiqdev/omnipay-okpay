@@ -1,6 +1,8 @@
 hiqdev/omnipay-okpay commits history
 ------------------------------------
 
+## [3.0.0] - 2017-10-10
+
 ## [0.2.0] - 2017-08-07
 
 - Use `ok_txn_amount` instead of `ok_txn_gross` to follow OkPay API changes ([@SilverFire], [@BladeRoot])
@@ -26,3 +28,4 @@ hiqdev/omnipay-okpay commits history
 [Under development]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...HEAD
 [0.1.0]: https://github.com/hiqdev/omnipay-okpay/releases/tag/0.1.0
 [0.2.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.1.0...0.2.0
+[3.0.0]: https://github.com/hiqdev/omnipay-okpay/compare/0.2.0...3.0.0
